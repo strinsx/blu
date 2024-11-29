@@ -1,0 +1,124 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+body{
+    background-color: rgb(24, 25, 26);
+    z-index: -1000;
+    position: relative;
+}
+
+h3 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.frame {
+
+    width: 50rem;
+    height: 30rem;
+    position: relative;
+    left: 2.5rem;
+    top: 8rem;
+    border-radius: 4px;
+    border-style: none;
+    filter: drop-shadow(1px 10px 20px);
+
+}
+
+.desc-container {
+    width: 35rem;
+    height: 23.8rem;
+    background-color: transparent;
+    position: absolute;
+    left: 54rem;
+    top: 13rem;
+}
+
+.backdrop-title, .backdrop-description {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.backdrop-title {
+    position: relative;
+    left: 13rem;
+    bottom: 20rem;
+}
+
+.holder{
+    left: 13rem;
+    position: relative;
+    bottom: 20rem;
+}
+
+.backdrop-description{
+    position: relative;
+    left: 13rem;
+    bottom: 20rem;
+    max-width: 20rem;
+    margin-bottom: 2rem;
+    font-size: .8rem;
+}
+
+.fa-globe {
+    color: rgb(110, 110, 212);
+    font-size: 1.3rem;
+    position: relative;
+    left: 13rem;
+    bottom: 20rem;
+}
+
+.fa-home {
+    color: white;
+    font-size: 1.4rem;
+    position: absolute;
+    right: 4rem;
+    top: 1rem;
+}
+
+.backdrop-poster {
+    height: 18rem;
+    border-radius: 4px;
+    position: relative;
+    transition: .55s ease;
+}
+
+.backdrop-poster:hover {
+    transform: translateX(-9px);
+}
+
+.fa-clock {
+    color: rgb(110, 110, 212);
+    font-size: 1.3rem;
+    position: relative;
+    left: 13rem;
+    bottom: 23rem;
+}
+
+.motmot, .motmot1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.motmot{
+    position: relative;
+    left: 15rem;
+    bottom: 23rem;
+}
+
+.motmot1 {
+    position:relative;
+    left: 15rem;
+    bottom: 26rem;
+}

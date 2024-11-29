@@ -1,0 +1,295 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(32, 29, 29);
+} 
+
+#titleView{
+    position: absolute;
+    font-family: 'Host Grotesk', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 3rem;
+    left: 5rem;
+    z-index: -2;
+    letter-spacing: -1px;
+    line-height: 3.2rem;
+}
+
+.overview {
+    height: 120vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.page1 {
+    position: relative;
+    height: 100%;
+}
+
+#movies {
+
+    font-family: 'Host Grotesk', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 3rem;
+    padding: 9;
+    z-index: -1;
+    position: relative;
+    left: 2rem;
+
+
+}
+
+
+.slider{
+    position: absolute;
+    max-width: 100%;
+    z-index: -1000;
+    padding: 0;
+    margin: 0;
+    filter: blur(4px);
+
+
+
+}
+
+.slides{
+    display: flex;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+    filter: drop-shadow(1px 10px 20px);
+    border-style: none;
+}
+
+.slide{
+    min-width: 100%;
+    background-color: rgba(51, 42, 42, 0.082);
+    transition: opacity 1s;
+}
+
+#inputID {
+    z-index: 100;
+    position: absolute;
+    height: 2rem;
+    width:  50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20rem;
+    top: 2rem;
+    background-color: rgba(54, 48, 48, 0.336);
+    border-style: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 1rem;
+}
+
+#inputID::placeholder{
+    color: white;
+}
+
+.title{
+    position: absolute;
+    z-index: 1;
+    left: 7rem;
+    top: 10rem;
+    color: rgba(248, 241, 241, 0.664);
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 8rem;
+    line-height: 5rem;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+}
+
+.title:hover, .titlesub:hover {
+
+    color: rgb(255, 255, 255);
+    transform: translate(3px, 10px);
+
+}
+
+
+
+.titlesub{
+    position: absolute;
+    font-family: 'League Gothic', sans-serif;
+    color: white;
+    font-weight: 200;
+    font-size: 2rem;
+    left: 7rem;
+    top: 24rem;
+    transition: .5s ease-in-out;
+
+}
+
+
+.movie-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.movie-container {
+    display: grid;
+    position: relative;
+    width: 100%;
+    row-gap: 1rem;
+    margin: 1rem;
+    padding: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 2rem 1rem;
+}
+
+.cellbox {
+    width: 14rem;
+    height: 20rem;
+    background-color: rgb(34, 33, 33);
+    position: relative;
+    border-radius: 3px;
+    transition: .55s ease;
+    
+}
+
+.cellbox:hover {
+    transform: translateX(9px);
+}
+
+.poster {
+    z-index: 1;
+    height: 15rem;
+    width: 12rem;
+    position: relative;
+    display: flex;
+    left: 1rem;
+    top: .4rem;
+    cursor: pointer;
+}
+
+.title-name {
+    display: flex;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: white;
+    position: relative;
+    left: 1.6rem;
+    max-width: 10rem;
+}
+
+.innerText {
+    position: absolute;
+    display: none;
+    background-color: rgb(24, 23, 23);
+    height: 18rem;
+    width: 18rem;
+    left: 3rem;
+    top: 3rem;
+    z-index: 1000;
+    border-radius: 3px;
+    transform: translateX(2px);
+    opacity: 0;
+    transition: .55s ease;
+    overflow: hidden;
+
+}
+
+.description {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 15rem;
+    height: 2rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    left: 1rem;
+    top: 10.5rem;
+    font-size: .8rem;
+    
+}
+
+.mini-poster {
+    position: absolute;
+    height: 7rem;
+    width: 14rem;
+    left: 1rem;
+    top: 1rem;
+    border-radius: 3px;
+}
+
+.mini-title {
+    position: relative;
+    z-index: 100;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    top: 8rem;
+    left: 1.2rem;
+    font-size: 15px;
+    max-width: 12rem;
+    
+}
+
+.cellbox:hover .innerText {
+    display: block;
+    opacity: .9;
+}
+
+.released-date , .estimated {
+    color: white;
+    position: relative;
+    z-index: 1000;
+    font-size: .7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    transform: rotate(90deg);
+    
+}
+
+.released-date {
+    left: 8rem;
+    top: 11rem;
+}
+
+.estimated {
+    left: 7rem;
+    top: 10rem;
+}
+
+.fa-globe , .fa-tv{
+    color: white;
+    position: absolute;
+    z-index: 101;
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+}
+
+.fa-globe {
+    left: 15.7rem;
+    top: 1.2rem;
+}
+
+.fa-tv {
+    left: 15.5rem;
+    top: 3rem;
+}

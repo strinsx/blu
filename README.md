@@ -5,4 +5,7 @@ a movie streaming website that fetches api from tmdb.
 ### HTML , CSS, VANILLA JS, VS CODE, GITHUB, GIT, TRELLO
 
 
+## SCREENSHOTS
+
+
 

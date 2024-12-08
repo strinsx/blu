@@ -122,3 +122,24 @@ h3 {
     left: 15rem;
     bottom: 26rem;
 }
+
+#inputText {
+    z-index: 100;
+    position: absolute;
+    height: 2rem;
+    width:  50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20rem;
+    top: 1rem;
+    background-color: rgba(54, 48, 48, 0.336);
+    border-style: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 1rem;
+}
+
+#inputText::placeholder {
+    color: white;
+}

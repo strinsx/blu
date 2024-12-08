@@ -9,6 +9,7 @@ let description = document.querySelectorAll(".description");
 let releaseDate = document.querySelectorAll(".released-date");
 let estimated = document.querySelectorAll(".estimated")
 let backdropA = document.querySelectorAll(".backdrop-description");
+let inputID = document.querySelector("#inputID");
 
 
 
@@ -31,7 +32,10 @@ async function overview() {
 
         const api = await fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options);
         const response = await api.json();
+        const searchAPI = await fetch('https://api.themoviedb.org/3/search/keyword?page=1', options);
         console.log(response);
+        const serachRes = await searchAPI.json();
+        console.log(serachRes);
        
 
         for(let i = 0; i < movieCells.length; i++) {
@@ -72,6 +76,13 @@ async function overview() {
     }
     
 }
+
+inputID.addEventListener('keydown', (ins)=>{
+  if(ins.key === "Enter") {
+    const keywordValue = inputID.value;
+    window.location.href = `search.html?keyword=${keywordValue}&id=`;
+  }
+})
 
 
 

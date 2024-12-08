@@ -9,6 +9,7 @@ const reeledPoster = reel.get('poster');
 let title = document.querySelector(".backdrop-title");
 let description = document.querySelector(".backdrop-description");
 let poster = document.querySelector(".backdrop-poster")
+let inputID = document.querySelector("#inputText");
 
 
 
@@ -30,9 +31,12 @@ async function fetchAPI() {
      title.textContent = reeledTitle;
      description.textContent = reeleddesc;
      poster.src = reeledPoster;
-     
 
-     
+     console.log(searchAPI);
+
+
+  
+    
      
 
    
@@ -41,6 +45,12 @@ async function fetchAPI() {
   catch(error) {
 
   }
+
+  inputID.addEventListener('keydown', (input)=> {
+    if(input.key === "Enter") {
+      window.location.href = `search.html?keyword=${inputID.value}`;
+    }
+  })
   
 }
 

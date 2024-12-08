@@ -2,6 +2,8 @@ let currentIndex = 0;
 const slides = document.querySelectorAll('.slide'); // Select all individual slides
 const slidesContainer = document.querySelector('.slides'); // Select the slides container
 const totalSlides = slides.length;
+const cellbox = document.querySelectorAll(".cellbox");
+const innerText = document.querySelector(".innerText");
 
 function showSlide(index) {
     slidesContainer.style.transform = `translateX(-${index * 100}%)`;
@@ -18,7 +20,8 @@ function prevSlide() {
 }
 
 // Optional: Automatic slide change every 3 seconds
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 4000);
+
 
 
 
